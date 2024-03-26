@@ -1,0 +1,31 @@
+.spoon {
+  &--left,
+  &--right,
+  &--center {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: url("../img/spoon-decoration.svg");
+      position: absolute;
+      transform: translateY(3rem);
+    }
+  }
+
+  &--left::after {
+    bottom: 0;
+    left: 0;
+  }
+
+  &--right::after {
+    bottom: 0;
+    right: 0;
+    content: url("../img/spoon-decoration-mirrored.svg");
+  }
+
+  &--center::after {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 3rem);
+  }
+}

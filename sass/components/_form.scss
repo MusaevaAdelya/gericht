@@ -1,0 +1,68 @@
+.form {
+  background-color: $color-gray-dark;
+  padding: 4.8rem 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba($color-accent, 0.2);
+  box-shadow: 22px 30px 95px 1px rgba($color-black, 0.7);
+
+  &__input-group {
+    display: flex;
+    gap: 3.2rem;
+    width: 100%;
+    @include respond(tab-port) {
+      flex-direction: column;
+      width: 70%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    padding: 1.6rem;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: $default-font-size;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: $color-gray;
+    background: transparent;
+    border: none;
+    border: 1px solid $color-gray-light;
+    width: 100%;
+  }
+
+  &--subscribe {
+    // width: 70%;
+    margin: 0 auto;
+    &__info {
+      font-size: $default-font-size;
+      line-height: 175%;
+      letter-spacing: 0.04em;
+      text-align: center;
+      color: $color-white;
+    }
+
+    &__input-btn {
+      display: flex;
+      width: 100%;
+      gap: 3.2rem;
+      justify-content: center;
+      align-items: center;
+
+      @include respond(phone) {
+        flex-direction: column;
+      }
+
+      input {
+        flex: 1;
+        max-width: 65rem;
+      }
+    }
+  }
+}

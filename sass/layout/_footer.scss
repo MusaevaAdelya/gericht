@@ -1,0 +1,68 @@
+.footer {
+  @include bgImage("../img/section-bg.jpg");
+  padding: 34.9rem 0 12.8rem 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(tab-port) {
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 10rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.6rem;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: #aaa;
+
+    @include respond(tab-port) {
+      margin: 0 auto;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 2.4rem;
+    font-family: $font-family;
+    font-size: 3.2rem;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: $color-gray-light;
+    text-align: center;
+
+    &-primary {
+      text-transform: uppercase;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__social-medias {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+}

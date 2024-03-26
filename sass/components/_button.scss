@@ -1,0 +1,25 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    font-family: $font-family;
+    color: $color-dark;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    display: inline-block;
+    font-size: $default-font-size;
+    background: $color-accent;
+    padding: 0.8rem 3.2rem;
+    text-transform: capitalize;
+
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background: darken($color-accent, 10%);
+  }
+}
